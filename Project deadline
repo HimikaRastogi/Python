@@ -1,0 +1,14 @@
+import datetime
+currentDate = datetime.date.today()
+print(currentDate)
+
+# Asking user to enter the deadlines for their project
+userInput = input('Enter the deadline of project (mm/dd/yyyy)')
+
+#datetime is library, datetime again is going within the lib., last date() is for getting only date
+deadLine = datetime.datetime.strptime(userInput, '%m/%d/%Y').date()
+
+print('Project Deadline is:', deadLine)
+
+daysLeft = deadLine - currentDate 
+print('Days left are:', daysLeft.days)
